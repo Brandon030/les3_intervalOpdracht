@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Test</title>
+        
+        <style>
+            * {box-sizing: border-box;} 
+            body,html {width:98%; height:97%;}
+            
+            #rondje{                
+                
+                height: 150px;
+                width: 150px;
+                
+                border-radius: 100%;
+                border: 1px solid;
+                
+                text-align: center;
+                line-height: 150px;
+                
+                margin-left: 50%;
+                margin-top: 50%;
+            }
+        </style>
+    </head>    
+    <body>  
+        <div id="rondje">
+        
+        </div>
+    <script>
+        var teller = 0;
+        var interval = setInterval(addUp, 1000);
+        
+        function showOnce() {
+            console.log("show once");
+        }
+        
+        setTimeout(showOnce, 3000);
+        
+        function showMore() {
+            console.log("show more....");
+        }
+        
+        setInterval(showMore, 1000);
+        
+        function addUp() {
+            teller = teller + 1;
+            
+            if (teller === 10) {                
+                clearInterval(interval);
+
+                    document.body.style.backgroundColor = "black";
+                    document.getElementById("rondje").style.background = "white";
+                }
+
+                document.getElementById("rondje").innerHTML = teller;
+                console.log("tellen");
+        }
+    </script>
+    <?php
+        
+    ?>    
+    </body>
+    
+</html>
